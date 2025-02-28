@@ -1,0 +1,203 @@
+* 
+{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: "monospace;"
+}
+
+
+body 
+{ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+
+}
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9d5e5;
+    background-image: url("https://images.unsplash.com/photo-1552521923-b46b3137bab3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.highscore {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #e06377;
+    padding: 40px 60px;
+    border: 1px solid #fff;
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #e06377;
+    padding: 40px 60px;
+    border: 1px solid #fff;
+}
+
+h2 {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: "Tiny5";
+}
+
+.reset {
+    padding: 15px 20px;
+    color: #267c65;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+
+.game {
+    width: 440px;
+    height: 420px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transition: 0.25s;
+    transform: rotateY(180deg);
+
+}
+
+.item.flipped {
+    transform: rotateY(0deg);
+}
+
+.item:after {
+    content: '⸮';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background: #e06377;
+    border: 2px solid #fff;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+
+.flipped:after ,
+.flipMatch:after {
+    transform: rotateY(180deg);
+}
+
+.lives {
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+.score {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.score-text {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.try-again {
+    display: none;
+    padding: 15px 20px;
+    color: #e06377;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.highscore-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.start-game {
+    padding: 15px 20px;
+    color: #e06377;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.name {
+    padding: 15px 20px;
+    color: #e06377;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}

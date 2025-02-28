@@ -1,0 +1,11 @@
+{
+  "name": "memorygame",
+  "version": "1.0.0",
+  "description": "A simple memory game for my portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Hannah Lindbäck",
+  "license": "ISC"
+}
